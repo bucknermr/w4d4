@@ -1,0 +1,15 @@
+<h1>Please log in, then YOU CAN RENT SUM CATS BRAJ MAHAL</h1>
+
+<%= render "shared/errors" %>
+
+<form action="<%= session_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="user[username]">
+
+  <label for="password">Password:</label>
+  <input type="password" name="user[password]">
+
+  <input type="submit" value="Log In">
+</form>
